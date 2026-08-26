@@ -1,0 +1,3098 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background: #2B2422;
+
+    color: #F7F1E8;
+
+    font-family: "Manrope", sans-serif;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   COMMON SCREEN
+========================= */
+
+.screen {
+    min-height: 100vh;
+
+    width: 100%;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+
+.content {
+    position: relative;
+
+    z-index: 5;
+
+    width: min(90%, 700px);
+
+    text-align: center;
+}
+
+
+/* =========================
+   SCREEN 1
+========================= */
+
+.opening-screen {
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(216, 183, 122, 0.12),
+            transparent 35%
+        ),
+        #2B2422;
+}
+
+
+.ambient-glow {
+    position: absolute;
+
+    width: 450px;
+    height: 450px;
+
+    border-radius: 50%;
+
+    background: rgba(201, 166, 160, 0.08);
+
+    filter: blur(100px);
+
+    animation: breathe 7s ease-in-out infinite;
+}
+
+
+.eyebrow {
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 5px;
+
+    text-transform: uppercase;
+
+    color: #BFA9A5;
+
+    margin-bottom: 30px;
+}
+
+
+.opening-screen h1 {
+    line-height: 0.85;
+
+    margin-bottom: 35px;
+}
+
+
+.opening-screen h1 span {
+    display: block;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 19px;
+
+    font-weight: 300;
+
+    letter-spacing: 7px;
+
+    color: #BFA9A5;
+
+    margin-bottom: 8px;
+}
+
+
+.opening-screen h1 strong {
+    display: block;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(100px, 16vw, 175px);
+
+    font-weight: 500;
+
+    letter-spacing: -5px;
+
+    color: #D8B77A;
+
+    text-shadow:
+        0 0 35px rgba(216, 183, 122, 0.18);
+}
+
+
+.intro {
+    max-width: 450px;
+
+    margin: auto auto 38px;
+
+    font-size: 13px;
+
+    line-height: 1.9;
+
+    color: #D9CEC5;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+button {
+    border: 1px solid rgba(216, 183, 122, 0.65);
+
+    background: transparent;
+
+    color: #F7F1E8;
+
+    padding: 14px 23px;
+
+    border-radius: 100px;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: 0.4s ease;
+}
+
+
+button span {
+    color: #D8B77A;
+
+    margin-left: 10px;
+
+    font-size: 15px;
+}
+
+
+button:hover {
+    background: #D8B77A;
+
+    color: #2B2422;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   SCREEN 2
+========================= */
+
+.tease-screen {
+    background: #F6EFE7;
+
+    color: #403532;
+}
+
+
+.floral-glow {
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    border-radius: 50%;
+
+    background: rgba(201, 166, 160, 0.13);
+
+    filter: blur(100px);
+}
+
+
+.tease-screen .eyebrow {
+    color: #A18182;
+}
+
+
+.tease-screen h2,
+.birthday-screen h2 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(55px, 8vw, 90px);
+
+    font-weight: 400;
+
+    line-height: 0.95;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 35px;
+}
+
+
+.tease-screen h2 em,
+.birthday-screen h2 em {
+    font-style: italic;
+
+    color: #B28A52;
+}
+
+
+.message {
+    max-width: 400px;
+
+    margin: auto auto 38px;
+
+    font-size: 13px;
+
+    line-height: 1.9;
+
+    color: #766965;
+}
+
+
+.tease-screen button {
+    color: #403532;
+}
+
+
+/* =========================
+   SCREEN 3
+========================= */
+
+.birthday-screen {
+    background:
+        radial-gradient(
+            circle at 50% 50%,
+            rgba(201, 166, 160, 0.13),
+            transparent 35%
+        ),
+        #2B2422;
+}
+
+
+.birthday-screen .question {
+    margin-bottom: 25px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 25px;
+
+    color: #E5DCD2;
+}
+
+
+#birthday {
+    display: block;
+
+    width: 240px;
+
+    margin: 0 auto 20px;
+
+    padding: 15px 18px;
+
+    border: none;
+
+    border-bottom: 1px solid #BFA9A5;
+
+    outline: none;
+
+    background: transparent;
+
+    color: #F7F1E8;
+
+    text-align: center;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 14px;
+
+    letter-spacing: 2px;
+}
+
+
+#birthday::placeholder {
+    color: #887A73;
+}
+
+
+.error {
+    display: none;
+
+    margin-top: 30px;
+
+    color: #D49A9A;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 27px;
+
+    line-height: 1.2;
+}
+
+
+.error small {
+    font-family: "Manrope", sans-serif;
+
+    font-size: 11px;
+
+    color: #BDB0A7;
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes breathe {
+
+    0%, 100% {
+        transform: scale(1);
+
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: scale(1.15);
+
+        opacity: 1;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .opening-screen h1 strong {
+        font-size: 105px;
+    }
+
+    .tease-screen h2,
+    .birthday-screen h2 {
+        font-size: 58px;
+    }
+
+    .intro {
+        font-size: 12px;
+    }
+
+}
+/* =========================
+   SCREEN 4 — REVEAL
+========================= */
+
+.reveal-screen {
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(216, 183, 122, 0.12),
+            transparent 35%
+        ),
+        #2B2422;
+}
+
+
+.reveal-glow {
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    border-radius: 50%;
+
+    background: rgba(201, 166, 160, 0.07);
+
+    filter: blur(110px);
+
+    animation: breathe 8s ease-in-out infinite;
+}
+
+
+.reveal-screen h2 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(55px, 8vw, 90px);
+
+    font-weight: 400;
+
+    line-height: 0.95;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 35px;
+}
+
+
+.reveal-screen h2 em {
+    font-style: italic;
+
+    color: #D8B77A;
+}
+
+
+.reveal-message {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 25px;
+
+    color: #E5DCD2;
+
+    margin-bottom: 15px;
+}
+
+
+.reveal-submessage {
+    max-width: 420px;
+
+    margin: 0 auto 38px;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 12px;
+
+    line-height: 1.9;
+
+    color: #AFA19A;
+}
+/* =========================
+   SCREEN 4 — REVEAL
+========================= */
+
+.reveal-screen {
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(216, 183, 122, 0.12),
+            transparent 35%
+        ),
+        #2B2422;
+}
+
+
+.reveal-glow {
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    border-radius: 50%;
+
+    background: rgba(201, 166, 160, 0.07);
+
+    filter: blur(110px);
+
+    animation: breathe 8s ease-in-out infinite;
+}
+
+
+.reveal-screen h2 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(55px, 8vw, 90px);
+
+    font-weight: 400;
+
+    line-height: 0.95;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 35px;
+}
+
+
+.reveal-screen h2 em {
+    font-style: italic;
+
+    color: #D8B77A;
+}
+
+
+.reveal-message {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 25px;
+
+    color: #E5DCD2;
+
+    margin-bottom: 15px;
+}
+
+
+.reveal-submessage {
+    max-width: 420px;
+
+    margin: 0 auto 38px;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 12px;
+
+    line-height: 1.9;
+
+    color: #AFA19A;
+}
+/* =========================
+   SCREEN 5 — MEMORIES
+========================= */
+
+.memories-screen {
+    background:
+        radial-gradient(
+            circle at 25% 30%,
+            rgba(201, 166, 160, 0.12),
+            transparent 28%
+        ),
+        #F6EFE7;
+
+    color: #403532;
+}
+
+
+.memory-content {
+    width: min(90%, 750px);
+
+    text-align: center;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.memories-screen .eyebrow {
+    color: #A18182;
+}
+
+
+.memories-screen h2 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(55px, 8vw, 95px);
+
+    font-weight: 400;
+
+    line-height: 0.92;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 35px;
+}
+
+
+.memories-screen h2 em {
+    font-style: italic;
+
+    color: #B28A52;
+}
+
+
+.memory-intro {
+    max-width: 430px;
+
+    margin: auto;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.9;
+
+    color: #766965;
+}
+
+
+.memory-arrow {
+    margin-top: 60px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 28px;
+
+    color: #B28A52;
+
+    animation: floatDown 2s ease-in-out infinite;
+}
+
+
+@keyframes floatDown {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(8px);
+    }
+}
+.memory-story {
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 100px;
+
+    padding: 100px 10%;
+
+    background: #F6EFE7;
+
+    color: #403532;
+}
+
+
+.story-photo {
+    width: min(42vw, 480px);
+
+    height: min(60vh, 580px);
+
+    background:
+        linear-gradient(
+            135deg,
+            #D9C8C0,
+            #EDE2D7
+        );
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.story-photo span {
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    color: rgba(64, 53, 50, 0.35);
+}
+
+
+.story-text {
+    max-width: 380px;
+}
+
+
+.memory-label {
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    color: #A18182;
+
+    margin-bottom: 25px;
+}
+
+
+.story-text h2 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(60px, 7vw, 90px);
+
+    font-weight: 400;
+
+    line-height: 0.85;
+
+    margin-bottom: 30px;
+}
+
+
+.story-text h2 em {
+    color: #B28A52;
+
+    font-style: italic;
+}
+
+
+.story-text > p:not(.memory-label):not(.small-note) {
+    font-family: "Manrope", sans-serif;
+
+    font-size: 14px;
+
+    line-height: 2;
+
+    color: #766965;
+}
+
+
+.small-note {
+    margin-top: 35px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 20px;
+
+    font-style: italic;
+
+    color: #9B7C83;
+
+    line-height: 1.5;
+}
+
+
+@media (max-width: 700px) {
+
+    .memory-story {
+        flex-direction: column;
+
+        gap: 60px;
+
+        padding: 90px 8%;
+    }
+
+    .story-photo {
+        width: 80vw;
+
+        height: 500px;
+    }
+
+}
+/* =========================
+   MOVIE COLOUR TEST
+========================= */
+
+.colour-test-screen {
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(166, 178, 143, 0.15),
+            transparent 35%
+        ),
+        #F5F1E9;
+
+    color: #403C35;
+}
+
+
+.colour-test-content {
+    width: min(90%, 700px);
+
+    text-align: center;
+}
+
+
+.colour-test-screen .eyebrow {
+    color: #87916F;
+}
+
+
+.colour-test-screen h2 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(58px, 8vw, 90px);
+
+    font-weight: 400;
+
+    line-height: 0.9;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 30px;
+}
+
+
+.colour-test-screen h2 em {
+    color: #8A9470;
+
+    font-style: italic;
+}
+
+
+.colour-question {
+    font-family: "Manrope", sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    color: #766F65;
+
+    margin-bottom: 45px;
+}
+
+
+.colour-question strong {
+    font-weight: 500;
+
+    color: #635D52;
+}
+
+
+/* OPTIONS */
+
+.colour-options {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 45px;
+
+    flex-wrap: wrap;
+}
+
+
+.colour-option {
+    border: none;
+
+    padding: 0;
+
+    background: transparent;
+
+    color: #615A52;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 12px;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transform: none;
+}
+
+
+.colour-option:hover {
+    background: transparent;
+
+    color: #615A52;
+
+    transform: translateY(-5px);
+}
+
+
+.colour-circle {
+    width: 58px;
+
+    height: 58px;
+
+    border-radius: 50%;
+
+    border: 2px solid rgba(64, 60, 53, 0.08);
+
+    transition: 0.3s ease;
+}
+
+
+.colour-option:hover .colour-circle {
+    transform: scale(1.1);
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+
+/* ACTUAL COLOURS */
+
+.mehendi .colour-circle {
+    background: #A3A77B;
+}
+
+
+.lavender .colour-circle {
+    background: #B7A7C8;
+}
+
+
+.pink .colour-circle {
+    background: #D8A5A7;
+}
+
+
+.black .colour-circle {
+    background: #292725;
+}
+
+
+/* RESPONSES */
+
+.colour-error,
+.colour-correct {
+    display: none;
+
+    margin-top: 40px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 27px;
+
+    line-height: 1.1;
+}
+
+
+.colour-error {
+    color: #B47C7C;
+}
+
+
+.colour-correct {
+    color: #8A9470;
+}
+
+
+.colour-error small {
+    font-family: "Manrope", sans-serif;
+
+    font-size: 10px;
+
+    color: #817A72;
+}
+.memory-arrow {
+    cursor: pointer;
+}
+/* =========================
+   MAA INTI BANGARAM
+========================= */
+
+.movie-memory-screen {
+
+    background: #F4EDE4;
+
+    color: #403532;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+    padding: 80px 10%;
+
+    position: relative;
+}
+
+
+/* PHOTO */
+
+.movie-photo-area {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.photo-placeholder {
+
+    width: min(35vw, 430px);
+
+    height: min(65vh, 550px);
+
+    background:
+        linear-gradient(
+            145deg,
+            #D8C5B8,
+            #E9DDD2
+        );
+
+    position: relative;
+
+    transform: rotate(-2deg);
+
+    box-shadow:
+        0 25px 50px rgba(62, 48, 43, 0.12);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.photo-placeholder::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 12px;
+
+    border: 1px solid rgba(64, 53, 50, 0.12);
+}
+
+
+.photo-placeholder span {
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    color: rgba(64, 53, 50, 0.35);
+
+}
+
+
+/* TEXT */
+
+.movie-text {
+
+    align-self: center;
+
+    max-width: 450px;
+}
+
+
+.movie-memory-screen .memory-label {
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    color: #A18182;
+
+    margin-bottom: 25px;
+}
+
+
+.movie-text h2 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(70px, 8vw, 105px);
+
+    font-weight: 400;
+
+    line-height: 0.8;
+
+    letter-spacing: -3px;
+
+    margin-bottom: 35px;
+}
+
+
+.movie-text h2 em {
+
+    color: #9B8062;
+
+    font-style: italic;
+}
+
+
+.movie-description {
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+
+    color: #6F655F;
+
+    margin-bottom: 18px;
+}
+
+
+.movie-detail {
+
+    max-width: 350px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 21px;
+
+    font-style: italic;
+
+    line-height: 1.5;
+
+    color: #9B7C83;
+
+    margin-bottom: 35px;
+}
+
+
+.movie-text button {
+
+    color: #403532;
+
+    border-color: #A18182;
+}
+
+
+.movie-text button span {
+
+    color: #9B8062;
+}
+
+
+/* DECORATION */
+
+.movie-decoration {
+
+    position: absolute;
+
+    top: 10%;
+
+    right: 6%;
+
+    font-size: 25px;
+
+    color: #B28A52;
+
+    opacity: 0.5;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .movie-memory-screen {
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 60px;
+
+        padding: 90px 8%;
+    }
+
+
+    .photo-placeholder {
+
+        width: 75vw;
+
+        height: 500px;
+    }
+
+
+    .movie-text h2 {
+
+        font-size: 75px;
+    }
+
+}/* =========================
+   BEACH MEMORY
+========================= */
+
+.beach-memory-screen {
+
+    position: relative;
+
+    background: #253B3A;
+
+    overflow: hidden;
+
+    color: #F7F3EC;
+}
+
+
+/* PHOTO */
+
+.beach-photo {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+}
+
+
+.beach-photo img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    filter: saturate(0.75);
+
+    transform: scale(1.03);
+}
+
+
+/* DARK + SOFT OVERLAY */
+
+.beach-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 2;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(28, 45, 43, 0.82),
+            rgba(28, 45, 43, 0.35),
+            rgba(28, 45, 43, 0.18)
+        );
+}
+
+
+/* CONTENT */
+
+.beach-content {
+
+    position: relative;
+
+    z-index: 3;
+
+    width: min(90%, 650px);
+
+    margin-left: 10%;
+
+    text-align: left;
+}
+
+
+.beach-memory-screen .memory-label {
+
+    color: #C2D0C8;
+
+    margin-bottom: 25px;
+}
+
+
+.beach-content h2 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(70px, 10vw, 125px);
+
+    font-weight: 400;
+
+    line-height: 0.78;
+
+    letter-spacing: -4px;
+
+    margin-bottom: 35px;
+}
+
+
+.beach-content h2 em {
+
+    color: #D7C8A5;
+
+    font-style: italic;
+}
+
+
+.beach-description {
+
+    max-width: 400px;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 14px;
+
+    line-height: 2;
+
+    color: #E1E6E0;
+
+    margin-bottom: 22px;
+}
+
+
+.beach-quote {
+
+    max-width: 420px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 23px;
+
+    font-style: italic;
+
+    line-height: 1.4;
+
+    color: #D7C8A5;
+
+    margin-bottom: 35px;
+}
+
+
+.beach-content button {
+
+    color: #F7F3EC;
+
+    border-color: rgba(247, 243, 236, 0.6);
+}
+
+
+.beach-content button span {
+
+    color: #D7C8A5;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .beach-overlay {
+
+        background:
+            linear-gradient(
+                180deg,
+                rgba(28, 45, 43, 0.45),
+                rgba(28, 45, 43, 0.82)
+            );
+    }
+
+
+    .beach-content {
+
+        width: 84%;
+
+        margin: auto;
+
+        text-align: center;
+    }
+
+
+    .beach-content h2 {
+
+        font-size: 78px;
+
+    }
+
+
+    .beach-description,
+    .beach-quote {
+
+        margin-left: auto;
+
+        margin-right: auto;
+
+    }
+
+}
+/* =========================
+   KALKI MEMORY
+========================= */
+
+.kalki-memory-screen {
+
+    position: relative;
+
+    background: #151719;
+
+    overflow: hidden;
+
+    color: #F4F0E8;
+}
+
+
+/* PHOTO */
+
+.kalki-photo {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+}
+
+
+.kalki-photo img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    filter:
+        saturate(0.65)
+        contrast(1.05);
+
+    transform: scale(1.04);
+}
+
+
+/* CINEMATIC OVERLAY */
+
+.kalki-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 2;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(12, 14, 16, 0.92),
+            rgba(12, 14, 16, 0.60),
+            rgba(12, 14, 16, 0.22)
+        );
+}
+
+
+/* CONTENT */
+
+.kalki-content {
+
+    position: relative;
+
+    z-index: 3;
+
+    width: min(90%, 600px);
+
+    margin-left: 10%;
+
+    text-align: left;
+}
+
+
+.kalki-memory-screen .memory-label {
+
+    color: #B6A98E;
+
+    margin-bottom: 25px;
+}
+
+
+.kalki-content h2 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(70px, 9vw, 120px);
+
+    font-weight: 400;
+
+    line-height: 0.78;
+
+    letter-spacing: -4px;
+
+    margin-bottom: 25px;
+}
+
+
+.kalki-content h2 em {
+
+    color: #C5B58D;
+
+    font-style: italic;
+}
+
+
+.movie-name {
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    color: #C5B58D;
+
+    margin-bottom: 30px;
+}
+
+
+.kalki-description {
+
+    max-width: 400px;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 14px;
+
+    line-height: 2;
+
+    color: #D1CEC6;
+
+    margin-bottom: 22px;
+}
+
+
+.kalki-quote {
+
+    max-width: 430px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 23px;
+
+    font-style: italic;
+
+    line-height: 1.4;
+
+    color: #BDB5A5;
+
+    margin-bottom: 35px;
+}
+
+
+.kalki-content button {
+
+    color: #F4F0E8;
+
+    border-color: rgba(244, 240, 232, 0.55);
+}
+
+
+.kalki-content button span {
+
+    color: #C5B58D;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .kalki-overlay {
+
+        background:
+            linear-gradient(
+                180deg,
+                rgba(12, 14, 16, 0.35),
+                rgba(12, 14, 16, 0.90)
+            );
+    }
+
+
+    .kalki-content {
+
+        width: 84%;
+
+        margin: auto;
+
+        text-align: center;
+    }
+
+
+    .kalki-content h2 {
+
+        font-size: 78px;
+
+    }
+
+
+    .kalki-description,
+    .kalki-quote {
+
+        margin-left: auto;
+
+        margin-right: auto;
+
+    }
+
+}
+/* =========================
+   CHOCOLATE MEMORY
+========================= */
+
+.chocolate-memory-screen {
+
+    background:
+        radial-gradient(
+            circle at 30% 30%,
+            rgba(190, 145, 126, 0.16),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 75% 70%,
+            rgba(216, 183, 122, 0.10),
+            transparent 25%
+        ),
+        #F5EDE6;
+
+    color: #493A36;
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+
+.chocolate-content {
+
+    position: relative;
+
+    z-index: 3;
+
+    width: min(90%, 700px);
+
+    text-align: center;
+}
+
+
+.chocolate-memory-screen .memory-label {
+
+    color: #A47F76;
+
+    margin-bottom: 28px;
+}
+
+
+.chocolate-content h2 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(65px, 9vw, 105px);
+
+    font-weight: 400;
+
+    line-height: 0.82;
+
+    letter-spacing: -3px;
+
+    margin-bottom: 35px;
+}
+
+
+.chocolate-content h2 em {
+
+    color: #A47768;
+
+    font-style: italic;
+}
+
+
+.chocolate-description {
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 14px;
+
+    line-height: 2;
+
+    color: #74645F;
+
+    margin-bottom: 20px;
+}
+
+
+.chocolate-note {
+
+    max-width: 430px;
+
+    margin: auto;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 23px;
+
+    font-style: italic;
+
+    line-height: 1.5;
+
+    color: #98756D;
+}
+
+
+.chocolate-hearts {
+
+    margin: 35px 0 38px;
+
+    font-size: 20px;
+
+    color: #B58A7E;
+
+    letter-spacing: 5px;
+}
+
+
+/* DECORATIVE ELEMENTS */
+
+.chocolate-decoration {
+
+    position: absolute;
+
+    font-family: "Cormorant Garamond", serif;
+
+    color: #B58A7E;
+
+    opacity: 0.35;
+}
+
+
+.chocolate-one {
+
+    top: 15%;
+
+    left: 15%;
+
+    font-size: 28px;
+
+    animation: floatChocolate 5s ease-in-out infinite;
+}
+
+
+.chocolate-two {
+
+    bottom: 18%;
+
+    right: 15%;
+
+    font-size: 45px;
+
+    animation: floatChocolate 6s ease-in-out infinite reverse;
+}
+
+
+@keyframes floatChocolate {
+
+    0%, 100% {
+
+        transform: translateY(0) rotate(0deg);
+
+    }
+
+    50% {
+
+        transform: translateY(-12px) rotate(8deg);
+
+    }
+
+}
+
+
+.chocolate-content button {
+
+    color: #493A36;
+
+    border-color: #B58A7E;
+}
+
+
+.chocolate-content button span {
+
+    color: #A47768;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .chocolate-content h2 {
+
+        font-size: 72px;
+
+    }
+
+    .chocolate-one {
+
+        left: 7%;
+
+    }
+
+    .chocolate-two {
+
+        right: 7%;
+
+    }
+
+}.call-memory-screen {
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(218, 178, 184, 0.18),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 80% 75%,
+            rgba(216, 183, 122, 0.12),
+            transparent 28%
+        ),
+        #F8F1E9;
+
+    color: #4A3D3A;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.call-content {
+
+    position: relative;
+
+    z-index: 3;
+
+    width: min(90%, 650px);
+
+    text-align: center;
+}
+
+
+.call-memory-screen .memory-label {
+
+    color: #A8898B;
+
+    margin-bottom: 28px;
+}
+
+
+.call-content h2 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(65px, 9vw, 105px);
+
+    font-weight: 400;
+
+    line-height: 0.82;
+
+    letter-spacing: -3px;
+
+    margin-bottom: 32px;
+}
+
+
+.call-content h2 em {
+
+    color: #B78A91;
+
+    font-style: italic;
+}
+
+
+.soft-line {
+
+    color: #C69B9E;
+
+    font-size: 16px;
+
+    margin-bottom: 28px;
+}
+
+
+.call-message {
+
+    max-width: 430px;
+
+    margin: auto;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 25px;
+
+    line-height: 1.5;
+
+    color: #685955;
+}
+
+
+.call-submessage {
+
+    margin-top: 18px;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 12px;
+
+    line-height: 1.8;
+
+    color: #92817C;
+}
+
+
+.phone-symbol {
+
+    margin: 32px 0;
+
+    font-size: 21px;
+
+    color: #B78A91;
+
+    letter-spacing: 7px;
+}
+
+
+.call-content button {
+
+    color: #4A3D3A;
+
+    border-color: #B99A9B;
+}
+
+
+.call-content button span {
+
+    color: #B78A91;
+}
+
+
+/* FLOATING DETAILS */
+
+.floating-heart {
+
+    position: absolute;
+
+    color: #C69B9E;
+
+    opacity: 0.35;
+
+    font-family: "Cormorant Garamond", serif;
+
+    z-index: 1;
+
+    animation: gentleFloat 6s ease-in-out infinite;
+}
+
+
+.heart-1 {
+
+    top: 15%;
+
+    left: 17%;
+
+    font-size: 32px;
+}
+
+
+.heart-2 {
+
+    top: 25%;
+
+    right: 16%;
+
+    font-size: 20px;
+
+    animation-delay: 1s;
+}
+
+
+.heart-3 {
+
+    bottom: 20%;
+
+    left: 13%;
+
+    font-size: 24px;
+
+    animation-delay: 2s;
+}
+
+
+.heart-4 {
+
+    bottom: 15%;
+
+    right: 19%;
+
+    font-size: 35px;
+
+    animation-delay: 3s;
+}
+
+
+@keyframes gentleFloat {
+
+    0%, 100% {
+
+        transform: translateY(0) rotate(0deg);
+
+    }
+
+    50% {
+
+        transform: translateY(-12px) rotate(8deg);
+
+    }
+
+}
+/* =========================
+   FINAL RAKHI MESSAGE
+========================= */
+
+.rakhi-message-screen {
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(210, 174, 180, 0.15),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 80% 75%,
+            rgba(216, 183, 122, 0.12),
+            transparent 30%
+        ),
+        #F7F0E8;
+
+    color: #493D39;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.rakhi-content {
+
+    width: min(90%, 680px);
+
+    text-align: center;
+
+    position: relative;
+
+    z-index: 3;
+}
+
+
+.final-eyebrow {
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    color: #A8898B;
+
+    margin-bottom: 25px;
+}
+
+
+.rakhi-content h2 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(75px, 10vw, 125px);
+
+    font-weight: 400;
+
+    line-height: 0.78;
+
+    letter-spacing: -4px;
+
+    margin-bottom: 35px;
+}
+
+
+.rakhi-content h2 em {
+
+    color: #A98288;
+
+    font-style: italic;
+}
+
+
+.final-line {
+
+    width: 45px;
+
+    height: 1px;
+
+    background: #C29A9D;
+
+    margin: 0 auto 35px;
+}
+
+
+.final-message {
+
+    max-width: 520px;
+
+    margin: auto;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 13px;
+
+    line-height: 2;
+
+    color: #746762;
+}
+
+
+.final-message p {
+
+    margin-bottom: 22px;
+}
+
+
+.highlight-message {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 26px;
+
+    font-style: italic;
+
+    color: #9D777D;
+
+    margin-top: 30px;
+}
+
+
+.final-signature {
+
+    margin-top: 35px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 21px;
+
+    font-style: italic;
+
+    color: #8E7A74;
+}
+
+
+.final-heart {
+
+    margin-top: 25px;
+
+    font-size: 25px;
+
+    color: #B78990;
+
+    animation: finalHeart 3s ease-in-out infinite;
+}
+
+
+/* FLOATING DETAILS */
+
+.final-sparkle {
+
+    position: absolute;
+
+    color: #C29A9D;
+
+    opacity: 0.3;
+
+    z-index: 1;
+
+    animation: finalFloat 7s ease-in-out infinite;
+}
+
+
+.sparkle-1 {
+
+    top: 15%;
+
+    left: 15%;
+
+    font-size: 25px;
+}
+
+
+.sparkle-2 {
+
+    top: 25%;
+
+    right: 17%;
+
+    font-size: 35px;
+
+    animation-delay: 1s;
+}
+
+
+.sparkle-3 {
+
+    bottom: 20%;
+
+    left: 18%;
+
+    font-size: 18px;
+
+    animation-delay: 2s;
+}
+
+
+.sparkle-4 {
+
+    bottom: 16%;
+
+    right: 14%;
+
+    font-size: 28px;
+
+    animation-delay: 3s;
+}
+
+
+@keyframes finalFloat {
+
+    0%, 100% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-15px);
+
+    }
+
+}
+
+
+@keyframes finalHeart {
+
+    0%, 100% {
+
+        transform: scale(1);
+
+    }
+
+    50% {
+
+        transform: scale(1.15);
+
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .rakhi-content h2 {
+
+        font-size: 80px;
+
+    }
+
+    .final-message {
+
+        font-size: 12px;
+
+    }
+
+}
+/* =========================
+   FINAL ENDING
+========================= */
+
+.final-ending-screen {
+
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(210, 174, 180, 0.18),
+            transparent 30%
+        ),
+        #F8F1E9;
+
+    color: #4A3D39;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.ending-content {
+
+    width: min(90%, 650px);
+
+    text-align: center;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.ending-small {
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    color: #A8898B;
+
+    margin-bottom: 28px;
+}
+
+
+.ending-content h2 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(70px, 9vw, 110px);
+
+    font-weight: 400;
+
+    line-height: 0.82;
+
+    letter-spacing: -3px;
+
+    margin-bottom: 35px;
+}
+
+
+.ending-content h2 em {
+
+    color: #A98288;
+
+    font-style: italic;
+}
+
+
+.ending-text {
+
+    max-width: 420px;
+
+    margin: auto auto 35px;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 13px;
+
+    line-height: 2;
+
+    color: #786B66;
+}
+
+
+.ending-content button {
+
+    color: #4A3D39;
+
+    border-color: #B99A9B;
+}
+
+
+.ending-content button span {
+
+    color: #B78990;
+}
+
+
+/* HIDDEN MESSAGE */
+
+.hidden-final {
+
+    margin-top: 45px;
+
+    opacity: 0;
+
+    transform: translateY(15px);
+
+    pointer-events: none;
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+
+.hidden-final.show {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+    pointer-events: auto;
+}
+
+
+.ending-heart {
+
+    font-size: 30px;
+
+    color: #B78990;
+
+    margin-bottom: 15px;
+}
+
+
+.hidden-final p {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 30px;
+
+    font-style: italic;
+
+    color: #8E6F75;
+
+    margin-bottom: 10px;
+}
+
+
+.hidden-final strong {
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    font-weight: 400;
+
+    color: #8B7973;
+}
+
+
+.ending-decoration {
+
+    position: absolute;
+
+    top: 15%;
+
+    right: 15%;
+
+    font-size: 45px;
+
+    color: #C69B9E;
+
+    opacity: 0.25;
+
+    animation: endingFloat 6s ease-in-out infinite;
+}
+
+
+@keyframes endingFloat {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+}
+/* =========================================
+   SOFT PHOTO + BACKGROUND BLENDING
+   ONLY FOR:
+   01 — MAA INTI BANGARAM
+   04 — CHOCOLATES
+   05 — CALL MEMORY
+========================================= */
+
+
+/* =========================================
+   01 — MAA INTI BANGARAM
+========================================= */
+
+.movie-memory-screen {
+    position: relative;
+    overflow: hidden;
+}
+
+.movie-photo-area {
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    width: 52%;
+    height: 100%;
+
+    z-index: 0;
+
+    overflow: hidden;
+
+    /* fade photo into the existing page background */
+    -webkit-mask-image:
+        linear-gradient(
+            to right,
+            transparent 0%,
+            rgba(0,0,0,0.35) 15%,
+            black 38%,
+            black 100%
+        );
+
+    mask-image:
+        linear-gradient(
+            to right,
+            transparent 0%,
+            rgba(0,0,0,0.35) 15%,
+            black 38%,
+            black 100%
+        );
+}
+
+.movie-photo-area img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    display: block;
+
+    opacity: 0.82;
+}
+
+
+/* text always stays above photo */
+
+.movie-text {
+    position: relative;
+    z-index: 3;
+
+    width: 48%;
+}
+
+
+/* =========================================
+   04 — CHOCOLATES
+========================================= */
+
+.chocolate-memory-screen {
+    position: relative;
+    overflow: hidden;
+}
+
+.chocolate-photo {
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 52%;
+    height: 100%;
+
+    z-index: 0;
+
+    overflow: hidden;
+
+    /* fade photo into page background on right */
+    -webkit-mask-image:
+        linear-gradient(
+            to right,
+            black 0%,
+            black 60%,
+            rgba(0,0,0,0.35) 82%,
+            transparent 100%
+        );
+
+    mask-image:
+        linear-gradient(
+            to right,
+            black 0%,
+            black 60%,
+            rgba(0,0,0,0.35) 82%,
+            transparent 100%
+        );
+}
+
+.chocolate-photo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    display: block;
+
+    opacity: 0.72;
+}
+
+.chocolate-content {
+    position: relative;
+    z-index: 3;
+
+    width: 48%;
+
+    margin-left: auto;
+}
+
+
+/* =========================================
+   05 — CALL MEMORY
+========================================= */
+
+.call-memory-screen {
+    position: relative;
+    overflow: hidden;
+}
+
+.call-photo {
+    position: absolute;
+
+    right: 0;
+    top: 0;
+
+    width: 52%;
+    height: 100%;
+
+    z-index: 0;
+
+    overflow: hidden;
+
+    /* fade photo into existing background */
+    -webkit-mask-image:
+        linear-gradient(
+            to right,
+            transparent 0%,
+            rgba(0,0,0,0.35) 15%,
+            black 40%,
+            black 100%
+        );
+
+    mask-image:
+        linear-gradient(
+            to right,
+            transparent 0%,
+            rgba(0,0,0,0.35) 15%,
+            black 40%,
+            black 100%
+        );
+}
+
+.call-photo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    display: block;
+
+    opacity: 0.55;
+
+    filter: grayscale(100%);
+}
+
+.call-content {
+    position: relative;
+    z-index: 3;
+
+    width: 48%;
+}
+/* =========================================
+   MOBILE RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 700px) {
+
+    /* General */
+
+    .screen {
+        min-height: 100svh;
+        padding: 40px 24px;
+    }
+
+
+    /* =================================
+       MAA INTI BANGARAM
+    ================================= */
+
+    .movie-photo-area {
+        width: 100%;
+        height: 58%;
+
+        top: 0;
+        right: 0;
+
+        -webkit-mask-image:
+            linear-gradient(
+                to bottom,
+                black 0%,
+                black 55%,
+                transparent 100%
+            );
+
+        mask-image:
+            linear-gradient(
+                to bottom,
+                black 0%,
+                black 55%,
+                transparent 100%
+            );
+    }
+
+    .movie-photo-area img {
+        object-position: center top;
+        opacity: 0.55;
+    }
+
+    .movie-text {
+        width: 100%;
+        margin-top: 45vh;
+
+        text-align: center;
+    }
+
+
+    /* =================================
+       BEACH
+    ================================= */
+
+    .beach-photo,
+    .kalki-photo {
+        height: 100%;
+    }
+
+    .beach-content,
+    .kalki-content {
+        width: 90%;
+        text-align: center;
+    }
+
+
+    /* =================================
+       KALKI
+    ================================= */
+
+    .kalki-photo img {
+        object-position: center;
+    }
+
+
+    /* =================================
+       CHOCOLATES
+    ================================= */
+
+    .chocolate-photo {
+        width: 100%;
+        height: 58%;
+
+        left: 0;
+
+        -webkit-mask-image:
+            linear-gradient(
+                to bottom,
+                black 0%,
+                black 55%,
+                transparent 100%
+            );
+
+        mask-image:
+            linear-gradient(
+                to bottom,
+                black 0%,
+                black 55%,
+                transparent 100%
+            );
+    }
+
+    .chocolate-photo img {
+        opacity: 0.45;
+        object-position: center;
+    }
+
+    .chocolate-content {
+        width: 100%;
+        margin-left: 0;
+
+        margin-top: 45vh;
+
+        text-align: center;
+    }
+
+
+    /* =================================
+       CALL MEMORY
+    ================================= */
+
+    .call-photo {
+        width: 100%;
+        height: 58%;
+
+        top: 0;
+        right: 0;
+
+        -webkit-mask-image:
+            linear-gradient(
+                to bottom,
+                black 0%,
+                black 55%,
+                transparent 100%
+            );
+
+        mask-image:
+            linear-gradient(
+                to bottom,
+                black 0%,
+                black 55%,
+                transparent 100%
+            );
+    }
+
+    .call-photo img {
+        opacity: 0.32;
+        object-position: center;
+    }
+
+    .call-content {
+        width: 100%;
+
+        margin-top: 45vh;
+
+        text-align: center;
+    }
+
+
+    /* =================================
+       HEADINGS
+    ================================= */
+
+    .movie-text h2,
+    .beach-content h2,
+    .kalki-content h2,
+    .chocolate-content h2,
+    .call-content h2 {
+        font-size: clamp(48px, 14vw, 72px);
+        line-height: 0.9;
+    }
+
+
+    /* =================================
+       PARAGRAPHS
+    ================================= */
+
+    .movie-description,
+    .movie-detail,
+    .beach-description,
+    .beach-quote,
+    .kalki-description,
+    .kalki-quote,
+    .chocolate-description,
+    .chocolate-note,
+    .call-message,
+    .call-submessage {
+        max-width: 330px;
+        margin-left: auto;
+        margin-right: auto;
+
+        font-size: 12px;
+        line-height: 1.8;
+    }
+
+
+    /* =================================
+       BUTTONS
+    ================================= */
+
+    .screen button {
+        margin-top: 20px;
+
+        padding: 12px 20px;
+
+        font-size: 11px;
+    }
+
+
+    /* =================================
+       FINAL MESSAGE
+    ================================= */
+
+    .rakhi-content {
+        width: 90%;
+        text-align: center;
+    }
+
+    .rakhi-content h2 {
+        font-size: clamp(60px, 17vw, 90px);
+    }
+
+    .final-message {
+        max-width: 340px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    /* =================================
+       FINAL ENDING
+    ================================= */
+
+    .ending-content {
+        width: 90%;
+    }
+
+    .ending-content h2 {
+        font-size: clamp(60px, 17vw, 90px);
+
+        letter-spacing: -2px;
+    }
+
+    .ending-text {
+        max-width: 320px;
+    }
+
+}
+body {
+    background:
+        radial-gradient(circle at 10% 20%, rgba(255, 192, 203, 0.12) 0 35px, transparent 36px),
+        radial-gradient(circle at 85% 15%, rgba(221, 160, 221, 0.10) 0 30px, transparent 31px),
+        radial-gradient(circle at 20% 85%, rgba(255, 182, 193, 0.10) 0 40px, transparent 41px),
+        #fffafc;
+
+    overflow-x: hidden;
+}
+.floating-flower {
+    position: fixed;
+    font-size: 14px;
+    opacity: 0.35;
+    pointer-events: none;
+    z-index: 10;
+    animation: floatFlower 8s ease-in-out infinite;
+}
+
+.flower1 {
+    left: 8%;
+    top: 20%;
+}
+
+.flower2 {
+    left: 88%;
+    top: 30%;
+    animation-delay: 2s;
+}
+
+.flower3 {
+    left: 15%;
+    top: 70%;
+    animation-delay: 4s;
+}
+
+.flower4 {
+    left: 80%;
+    top: 75%;
+    animation-delay: 1s;
+}
+
+.flower5 {
+    left: 50%;
+    top: 10%;
+    animation-delay: 3s;
+}
+
+@keyframes floatFlower {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-18px) rotate(8deg);
+    }
+}
+/* ==============================
+   SUBTLE FLORAL BACKGROUND
+============================== */
+
+body {
+    background:
+        radial-gradient(
+            circle at 10% 15%,
+            rgba(236, 190, 210, 0.16) 0 45px,
+            transparent 46px
+        ),
+        radial-gradient(
+            circle at 90% 20%,
+            rgba(210, 190, 225, 0.14) 0 40px,
+            transparent 41px
+        ),
+        radial-gradient(
+            circle at 15% 85%,
+            rgba(236, 190, 210, 0.12) 0 50px,
+            transparent 51px
+        ),
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(220, 195, 225, 0.12) 0 45px,
+            transparent 46px
+        );
+}
+
+
+/* ==============================
+   TINY FLOATING FLOWERS
+============================== */
+
+.floating-flower {
+    position: fixed;
+    z-index: 20;
+    pointer-events: none;
+
+    font-size: 13px;
+    opacity: 0.35;
+
+    animation: floatFlower 7s ease-in-out infinite;
+}
+
+.flower1 {
+    left: 7%;
+    top: 18%;
+}
+
+.flower2 {
+    left: 88%;
+    top: 28%;
+    animation-delay: 2s;
+}
+
+.flower3 {
+    left: 12%;
+    top: 72%;
+    animation-delay: 4s;
+}
+
+.flower4 {
+    left: 82%;
+    top: 75%;
+    animation-delay: 1s;
+}
+
+.flower5 {
+    left: 50%;
+    top: 8%;
+    animation-delay: 3s;
+}
+
+
+@keyframes floatFlower {
+
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-15px) rotate(8deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+}

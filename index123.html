@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For My Anna 🤍</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@300;400;500&family=Manrope:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style123.css">
+
+</head>
+
+
+<body>
+    <div class="floating-flower flower1">🌸</div>
+<div class="floating-flower flower2">🌷</div>
+<div class="floating-flower flower3">✿</div>
+<div class="floating-flower flower4">🌸</div>
+<div class="floating-flower flower5">✿</div>
+
+
+    <!-- SCREEN 1 -->
+
+    <main class="screen opening-screen" id="screen1">
+
+        <div class="ambient-glow"></div>
+
+        <div class="content">
+
+            <p class="eyebrow">
+                A little something for you
+            </p>
+
+            <h1>
+                <span>For My</span>
+                <strong>Anna</strong>
+            </h1>
+
+            <p class="intro">
+                Some bonds are impossible to put into words.
+                So I made you a little corner of the internet instead.
+            </p>
+
+            <button onclick="showScreen('screen2')">
+                Open Your Surprise
+                <span>→</span>
+            </button>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- SCREEN 2 -->
+
+    <section class="screen tease-screen" id="screen2">
+
+        <div class="floral-glow"></div>
+
+        <div class="content">
+
+            <p class="eyebrow">
+                Wait...
+            </p>
+
+            <h2>
+                I made this<br>
+                <em>just for you.</em>
+            </h2>
+
+            <p class="message">
+                But before you see what's waiting inside,
+                I have one tiny question.
+            </p>
+
+            <button onclick="showScreen('screen3')">
+                Continue
+                <span>→</span>
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- SCREEN 3 -->
+
+    <section class="screen birthday-screen" id="screen3">
+
+        <div class="content">
+
+            <p class="eyebrow">
+                One little test
+            </p>
+
+            <h2>
+                How well do you<br>
+                <em>know your sister?</em>
+            </h2>
+
+            <p class="question">
+                When is my birthday?
+            </p>
+
+            <input
+                type="text"
+                id="birthday"
+                placeholder="DD / MM / YYYY"
+                maxlength="10"
+            >
+
+            <button onclick="checkBirthday()">
+                Unlock
+                <span>→</span>
+            </button>
+
+            <p class="error" id="error">
+                I hate you. 😤<br>
+                <small>Na birthday kuda gurtuledu aa?</small>
+            </p>
+
+        </div>
+
+    </section>
+    <!-- =================================
+     SCREEN 4 — THE REAL SURPRISE
+================================== -->
+
+<section class="screen reveal-screen" id="screen4">
+
+    <div class="reveal-glow"></div>
+
+    <div class="content">
+
+        <p class="eyebrow">
+            You remembered
+        </p>
+
+        <h2>
+            Maybe you know me<br>
+            <em>better than I thought.</em>
+        </h2>
+
+        <p class="reveal-message">
+            But that's not really why I made this.
+        </p>
+
+        <p class="reveal-submessage">
+            It's because having you as my Anna
+            has given me more little memories
+            than I can count.
+        </p>
+
+        <button onclick="showScreen('colour-test')">
+    Let me show you
+    <span>→</span>
+</button>
+
+    </div>
+
+</section>
+<!-- =================================
+     SCREEN 4 — THE REAL SURPRISE
+================================== -->
+
+<!-- =================================
+     MOVIE MEMORY — COLOUR TEST
+================================== -->
+
+<section class="screen colour-test-screen" id="colour-test">
+
+    <div class="colour-test-content">
+
+        <p class="eyebrow">
+            BEFORE THIS MEMORY...
+        </p>
+
+        <h2>
+            Do you remember<br>
+            <em>what I wore?</em>
+        </h2>
+
+        <p class="colour-question">
+            That day when we went to
+            <strong>Maa Inti Bangaram</strong>...
+        </p>
+
+        <div class="colour-options">
+
+            <button
+                class="colour-option mehendi"
+                onclick="checkColour('mehendi')">
+
+                <span class="colour-circle"></span>
+
+                <span>Mehendi</span>
+
+            </button>
+
+
+            <button
+                class="colour-option lavender"
+                onclick="checkColour('lavender')">
+
+                <span class="colour-circle"></span>
+
+                <span>Lavender</span>
+
+            </button>
+
+
+            <button
+                class="colour-option pink"
+                onclick="checkColour('pink')">
+
+                <span class="colour-circle"></span>
+
+                <span>Pink</span>
+
+            </button>
+
+
+            <button
+                class="colour-option black"
+                onclick="checkColour('black')">
+
+                <span class="colour-circle"></span>
+
+                <span>Black</span>
+
+            </button>
+
+        </div>
+
+
+        <p
+            class="colour-error"
+            id="colour-error">
+
+            Nope 😭<br>
+            <small>Try again, Anna.</small>
+
+        </p>
+
+
+        <p
+            class="colour-correct"
+            id="colour-correct">
+
+            You remember. 🤍
+
+        </p>
+
+    </div>
+
+</section>
+<!-- =================================
+     SCREEN 5 — MEMORIES
+================================== -->
+
+<section class="screen memories-screen" id="screen5">
+
+    <div class="memory-content">
+
+        <p class="eyebrow">
+            LITTLE MEMORIES
+        </p>
+
+        <h2>
+            A few things I'll<br>
+            <em>always remember.</em>
+        </h2>
+
+        <p class="memory-intro">
+            They may look like small moments,
+            but somehow they became some of my favourite memories.
+        </p>
+
+        <div
+    class="memory-arrow"
+    onclick="showScreen('colour-test')">
+
+    ↓
+
+</div>
+
+    </div>
+
+</section>
+<!-- =================================
+     MEMORY — MAA INTI BANGARAM
+================================== -->
+<!-- =================================
+     MEMORY — MAA INTI BANGARAM
+================================== -->
+
+<section class="screen movie-memory-screen" id="movie-memory">
+
+    <div class="movie-decoration">
+        ✦
+    </div>
+
+    <div class="movie-photo-area">
+
+        <img
+            src="images/rakhi5.jpeg"
+            alt="A memory with my Anna"
+        >
+
+    </div>
+
+    <div class="movie-text">
+
+        <p class="memory-label">
+            MEMORY · 01
+        </p>
+
+        <h2>
+            Maa Inti<br>
+            <em>Bangaram.</em>
+        </h2>
+
+        <p class="movie-description">
+            Aa roju movie ki vellam...
+            chaala enjoy chesa.
+        </p>
+
+        <p class="movie-detail">
+            And somehow, the day became
+            more memorable than the movie itself.
+        </p>
+
+        <button onclick="showScreen('beach-memory')">
+
+            One more memory
+            <span>→</span>
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =================================
+     MEMORY — FIRST BEACH DAY
+================================== -->
+
+<section class="screen beach-memory-screen" id="beach-memory">
+
+    <div class="beach-photo">
+
+        <img
+            src="images/rakhi3.jpeg"
+            alt="Our first beach day"
+        >
+
+    </div>
+
+    <div class="beach-overlay"></div>
+
+    <div class="beach-content">
+
+        <p class="memory-label">
+            MEMORY · 02
+        </p>
+
+        <h2>
+            My First<br>
+            <em>Beach Day.</em>
+        </h2>
+
+        <p class="beach-description">
+            First time beach ki vellina roju.
+            Aa experience kuda nuvve naaku ichav.
+        </p>
+
+        <p class="beach-quote">
+            “Some firsts become special
+            because of the person beside you.”
+        </p>
+
+        <button onclick="showScreen('kalki-memory')">
+
+            Keep going
+            <span>→</span>
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =================================
+     MEMORY — KALKI 2898 AD
+================================== -->
+
+<section class="screen kalki-memory-screen" id="kalki-memory">
+
+    <div class="kalki-photo">
+
+        <img
+            src="images/rakhi1.jpeg"
+            alt="Kalki 2898 AD memory"
+        >
+
+    </div>
+
+    <div class="kalki-overlay"></div>
+
+    <div class="kalki-content">
+
+        <p class="memory-label">
+            MEMORY · 03
+        </p>
+
+        <h2>
+            My First<br>
+            <em>Theatre Movie.</em>
+        </h2>
+
+        <p class="movie-name">
+            Kalki 2898 AD
+        </p>
+
+        <p class="kalki-description">
+            First time theatre ki vellina roju.
+            Aa experience kuda nee valle.
+        </p>
+
+        <p class="kalki-quote">
+            “Some memories aren't about
+            what we watched, but who we watched it with.”
+        </p>
+
+        <button onclick="showScreen('chocolate-memory')">
+
+            One more thing
+            <span>→</span>
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =================================
+     MEMORY — CHOCOLATES
+================================== -->
+
+<section class="screen chocolate-memory-screen" id="chocolate-memory">
+
+    <div class="chocolate-photo">
+
+        <img
+            src="images/rakhi2.jpeg"
+            alt="A family memory"
+        >
+
+    </div>
+
+    <div class="chocolate-overlay"></div>
+
+    <div class="chocolate-decoration chocolate-one">
+        ✦
+    </div>
+
+    <div class="chocolate-decoration chocolate-two">
+        ♡
+    </div>
+
+    <div class="chocolate-content">
+
+        <p class="memory-label">
+            MEMORY · 04
+        </p>
+
+        <h2>
+            You always<br>
+            <em>brought me chocolates.</em>
+        </h2>
+
+        <p class="chocolate-description">
+            Chaala times naakosam chocolates
+            teesukochav.
+        </p>
+
+        <p class="chocolate-note">
+            Small thing anipinchachu...
+            but I noticed every single time.
+        </p>
+
+        <div class="chocolate-hearts">
+            ♡ &nbsp; ♡ &nbsp; ♡
+        </div>
+
+        <button onclick="showScreen('call-memory')">
+
+            One thing I never told you
+            <span>→</span>
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =================================
+     MEMORY — THE CALL
+================================== -->
+
+<section class="screen call-memory-screen" id="call-memory">
+
+    <div class="call-photo">
+
+        <img
+            src="images/rakhi4.jpeg"
+            alt="An old memory with my Anna"
+        >
+
+    </div>
+
+    <div class="call-photo-overlay"></div>
+
+    <div class="floating-heart heart-1">
+        ♡
+    </div>
+
+    <div class="floating-heart heart-2">
+        ♡
+    </div>
+
+    <div class="floating-heart heart-3">
+        ✦
+    </div>
+
+    <div class="floating-heart heart-4">
+        ♡
+    </div>
+
+    <div class="call-content">
+
+        <p class="memory-label">
+            MEMORY · 05
+        </p>
+
+        <h2>
+            Sometimes...<br>
+            I just <em>call you. ♡</em>
+        </h2>
+
+        <div class="soft-line">
+            ✦
+        </div>
+
+        <p class="call-message">
+            Badha anipisthe Annaki call chesi
+            matladthe poiddi.
+        </p>
+
+        <p class="call-submessage">
+            You somehow make things
+            feel a little lighter.
+        </p>
+
+        <div class="phone-symbol">
+            ☎ ♡
+        </div>
+
+        <button onclick="showScreen('rakhi-message')">
+
+            There's something I want to say
+            <span>→</span>
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =================================
+     FINAL RAKHI MESSAGE
+================================== -->
+
+<section class="screen rakhi-message-screen" id="rakhi-message">
+
+    <div class="final-sparkle sparkle-1">
+        ✦
+    </div>
+
+    <div class="final-sparkle sparkle-2">
+        ♡
+    </div>
+
+    <div class="final-sparkle sparkle-3">
+        ✦
+    </div>
+
+    <div class="final-sparkle sparkle-4">
+        ♡
+    </div>
+
+    <div class="rakhi-content">
+
+        <p class="final-eyebrow">
+            FOR THE BEST ANNA
+        </p>
+
+        <h2>
+            Happy<br>
+            <em>Rakhi Anna.</em>
+        </h2>
+
+        <div class="final-line"></div>
+
+        <div class="final-message">
+
+            <p>
+                Nuvvu funny ga unna,
+                strict ga unna,
+                nannu tease chesina...
+                somehow, whenever I need you,
+                you are always there.
+            </p>
+
+            <p class="highlight-message">
+                Thank you for being
+                my Anna. ♡
+            </p>
+
+        </div>
+
+        <p class="final-signature">
+            — Your little Chinthalli ♡
+        </p>
+
+        <div class="final-heart">
+            ♡
+        </div>
+
+        <button onclick="showScreen('final-ending')">
+
+            One last thing
+            <span>→</span>
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =================================
+     FINAL ENDING
+================================== -->
+
+<section class="screen final-ending-screen" id="final-ending">
+
+    <div class="ending-decoration">
+        ♡
+    </div>
+
+    <div class="ending-content">
+
+        <p class="ending-small">
+            ONE LAST THING...
+        </p>
+
+        <h2>
+            This little<br>
+            corner is <em>yours.</em>
+        </h2>
+
+        <p class="ending-text">
+            For all the little things you do,
+            the memories you give me,
+            and simply for being you.
+        </p>
+
+        <button onclick="showFinalMessage()">
+
+            Open one last thing
+            <span>♡</span>
+
+        </button>
+
+        <div class="hidden-final" id="hidden-final">
+
+            <div class="ending-heart">
+                ♡
+            </div>
+
+            <p>
+                Happy Rakhi, Anna.
+            </p>
+
+            <strong>
+                Your little Chinthalli ♡
+            </strong>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
