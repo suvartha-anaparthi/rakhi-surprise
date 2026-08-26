@@ -3096,3 +3096,116 @@ body {
     }
 
 }
+/* ==============================
+   MOBILE PHOTO FIX
+============================== */
+
+@media (max-width: 700px) {
+
+    /* MAA INTI BANGARAM */
+    .movie-photo-area {
+        width: 100%;
+        height: 45%;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        mask-image: linear-gradient(
+            to bottom,
+            black 0%,
+            black 70%,
+            transparent 100%
+        );
+        -webkit-mask-image: linear-gradient(
+            to bottom,
+            black 0%,
+            black 70%,
+            transparent 100%
+        );
+    }
+
+    .movie-photo-area img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+        opacity: 0.75;
+    }
+
+    .movie-text {
+        position: relative;
+        z-index: 3;
+        width: 100%;
+        margin-top: 42vh;
+    }
+
+
+    /* BEACH */
+    .beach-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+
+
+    /* KALKI */
+    .kalki-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+
+
+    /* CHOCOLATES */
+    .chocolate-photo {
+        width: 100%;
+        height: 45%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    .chocolate-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+        opacity: 0.65;
+    }
+
+    .chocolate-content {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 42vh;
+        position: relative;
+        z-index: 3;
+    }
+
+
+    /* CALL MEMORY */
+    .call-photo {
+        width: 100%;
+        height: 45%;
+        top: 0;
+        right: 0;
+        z-index: 1;
+    }
+
+    .call-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+        opacity: 0.55;
+        filter: grayscale(100%);
+    }
+
+    .call-content {
+        width: 100%;
+        margin-top: 42vh;
+        position: relative;
+        z-index: 3;
+    }
+
+}
