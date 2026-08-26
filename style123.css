@@ -3209,3 +3209,15 @@ body {
     }
 
 }
+@media (max-width: 700px) {
+
+    .movie-photo-area img,
+    .beach-photo img,
+    .kalki-photo img,
+    .chocolate-photo img,
+    .call-photo img {
+        object-fit: contain !important;
+        object-position: center center !important;
+    }
+
+}
